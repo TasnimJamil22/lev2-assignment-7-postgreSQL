@@ -217,27 +217,39 @@ In PostgreSQL ,to perform advance operations, we can use JOIN operations.It prov
                                     In postgreSQL JOIN combines rows from two or more tables based on a common column between them.
 It creates a virtual table from the data and then it allows a single query.
 It works in a specific way:
+
                                                                                        SELECT s.student_name
                                                                                        FROM enrollment e
                                                                                        JOIN students s ON e.student_id = s.student_id
                                                                                        WHERE course_id = 1
+                                                                                       
 
 In this example we can see that, 
                                       *firstly we defined the table in by specifying the table we want to join.
+                                      
                                       *we write s.student_name, here we make alias for student, and it is not in enrollment e table but we want to join it.
+                                      
                                       *we wrote enrollment e as we want to join in enrollment  table.
+                                      
                                       *then we used JOIN and made a condition in which we declared how they will be related with each other, the student_id in enrollmet table will be equal to the student table's student_id,
-                                       then we also add a WHERE clause and retrieved a table in which course_id is 1.
+                                      
+                                      *then we also add a WHERE clause and retrieved a table in which course_id is 1.
 In the below example,
-                                                                                       SELECT s.student_name
-                                                                                       FROM enrollment e
-                                                                                       INNER JOIN students s ON e.student_id = s.student_id
-                                                                                       WHERE course_id = 1
+
+                                                                                SELECT s.student_name
+                                                                                FROM enrollment e
+                                                                                INNER JOIN students s ON e.student_id = s.student_id
+                                                                                WHERE course_id = 1
+                                                                                
 we used INNER before join which is a type of join, we can use diffrent type of joins like,
+
 *INNER JOIN: Returns rows that have matching values in both tables.                                                                                      
 *LEFT JOIN: Returns all rows from left table and matched rows from right table.
+
 *RIGHT JOIN: Returns all rows from right table and matched rows from left table.
+
 *FULL JOIN:Returns all rows from left and right table although they are not matched.
+
 
 ## 9.Explain the GROUP BY clause and its role in aggregation operations.
 Ans:
