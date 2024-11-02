@@ -6,6 +6,7 @@ Postgres has many key features.which are:
 
 -->Open Source:
                  Many higher level international developer communities are continuously supporting this language,contributing it,fixing bugs if there any and also adding some robust features and as a result postgres became so popular now-a-days.
+                 
 -->RDBMS:
                  It is created based on Relational Database Management System.
 -->Modern:
