@@ -5,10 +5,10 @@
 Postgres has many key features.which are:
 
 **-->Open Source:**
-                 Many higher level international developer communities are continuously supporting this language,contributing it,fixing bugs if there any and also adding some robust features and as a result postgres became so popular now-a-days
+                Many higher level international developer communities are continuously supporting this language,contributing it,fixing bugs if there any and also adding some robust features and as a result postgres became so popular now-a-days
                  
 **-->RDBMS:**
-                 It is created based on Relational Database Management System.
+It is created based on Relational Database Management System.
                  
 **-->Modern:**
                 *PostgreSQL is very modern as a language as it is supports many modern key features like modern datatypes(INTEGER,SERIAL-auto incrementing integers,Decimal and floating point ,character,Date and Times , Boolean ,UUID,Array types etc).
@@ -30,10 +30,9 @@ some other purposes of a database in PostgresSQL are:
 *Schemas act as separate namespaces, which means it can have multiple tables with the same name in different schemas without causing conflicts. 
                      
 **-->Access Control:**
-
-                     *Schemas allow to set permissions at the schema level.
-                     *It can be controlled which users have access to specific schemas or tables within them
-                     *Adding a layer of security and organization for user access.
+*Schemas allow to set permissions at the schema level
+*It can be controlled which users have access to specific schemas or tables within them
+*Adding a layer of security and organization for user access.
                      
 **-->Simplifies Data Management:**
 
