@@ -25,7 +25,7 @@ some other purposes of a database in PostgresSQL are:
 **-->Namespace Segmentation:**
                       chemas act as separate namespaces, which means it can have multiple tables with the same name in different schemas without causing conflicts. 
                       
-**-->Access Control: **
+**-->Access Control:**
                       Schemas allow to set permissions at the schema level.
                       It can be controlled which users have access to specific schemas or tables within them
                       Adding a layer of security and organization for user access.
