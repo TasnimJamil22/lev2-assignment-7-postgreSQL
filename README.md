@@ -81,7 +81,6 @@ Ans:
                                                   2.CHAR
                                                                   
 There are some differences between VARCHAR and CHAR data types.These are mentioned below:
-
               VARCHAR is a variable character but CHAR is a fixed character.
                       
               VARCHAR is flexible .On the other side , CHAR is constant.
