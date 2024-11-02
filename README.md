@@ -221,40 +221,4 @@ students table based on isActive column.Ex:
                                                                                GROUP BY isActive
 here usgin GROUP BY we can distinguish between the average age of active and inactive students .
 
-## 11.What is the purpose of an index in PostgreSQL, and how does it optimize query performance?
-Ans:
-*The purpose of an index in PostgreSQL:
-In postgreSQL ,an index is very significant.It plays a big role to optimize query performance.Also it is used for:
--->It improves the speed of data retrieval operations on a table.
--->It seraches data in a faster way without scanning the entire table.
--->It increases the performance of data queries.
--->This is often used for SELECT,JOIN and WHERE to retrieve data more efficiently.
--->The amount of data that needs to scan to find results is also reduces when we use indexing.
-*How an index optimizes query performance:
-                             Indexing in a column or in a set of columns creates a individual data structure that keeps the data block wise so that , when need to find the specific data , it will only search from the block where it is belonging rather than searching the entire table.So it retrives data more faster .
-                              We need to make indexes especially in a foreign key ,not primary key or unique key because there two makes an index by themselves for better performance.For big amount of data , index should be must used in big data set and avoid the data which needs to be frequently updated because if we do, it will be very critical to manage.
-Ex:
-                                                                            CREATE INDEX idx_student_id ON students(student_id);
-                                                                           SELECT * FROM students WHERE student_id = 1100;
-here we used INDEX for indexing on students_id from table students and named idx_student_id.We are retrieving all student_id where the student_id is 1100. So, the time it takes is very little and more effiecient as we used an index .
-
-## 12.Explain the concept of a PostgreSQL view and how it differs from a table.
-Ans:
-PostgreSQL view :
-                            In PostgreSQL views are virtual tables generated from the result of a SQL query.The purpose of SQL views is to:
-                                                                         *simplifying complex queries 
-                                                                         *Improve security and 
-                                                                         *Inhance data abstraction
-for example, 
-                                                                           CREATE VIEW active_students AS
-                                                                           SELECT name,grade
-                                                                           FROM students
-                                                                           WHERE isActive = TRUE;
-Here we created a view named active_students to show only active students name and grade.It is like a virtual table that acts like a usual table and we can perform any operation or query by the name of this view : 'active_students'. It will save the query and will be retrieved when we call it .Ex:                                               SELECT * FROM active_students
-We can compare it as a factorial function.As we write the code only once and call it repeatedly when we need to .
--->How view differs from a table:
-                                                *Table stores actual data in rows but VIEW stores only the SQL query ,not the actual data.
-                                                *Table used for storage ,indexing but VIEW used to simplilfy complex queries.
-                                                *Accessing Table is comperatively faster than VIEW ,as view re-returns the query each time. 
-                                                *In Table data can be inserted , updated and deleted but VIEW is typically read-only (updateable only under specific conditions).
-
+ 
