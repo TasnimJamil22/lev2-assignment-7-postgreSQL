@@ -207,42 +207,59 @@ we used INNER before join which is a type of join, we can use diffrent type of j
 
 ## 9.Explain the GROUP BY clause and its role in aggregation operations.
 Ans:
-The GROUP BY clause:
+
+**The GROUP BY clause:**
                                    The GROUP BY clause in postgreSQL is very important.It is used for arranging data and also helps performing aggregation operations.Aggregations are performed individually by this GROUP BY clause.
+                                   
 ex:                                                                                   SELECT c.course_name, COUNT(e.course_id) AS students_enrolled
+
                                                                                        FROM enrollment e
                                                                                        JOIN courses c ON e.course_id = c.course_id
                                                                                        GROUP BY c.course_name;
 here,
+
 *we performed aggregation COUNT() to identify the number of total course_id and named it with students_enrolled.
+
 *We specifiend the table in which we want to operate.
+
 *Using JOIN we joined the course_id of two tables courses and enrollment.
+
 *Lastly, we used GROUP BY to retrieve the courses we counted with the COUNT() in a group named courses_name.
+
 So, GROUP BY is a powerful key way to perform data aggregation in a structured way.
 
 ## 10.How can you calculate aggregate functions like COUNT, SUM, and AVG in PostgreSQL?
 Ans:
-How to calculate aggregate functions :   
-                                                        We can perform aggregate functions using COUNT,SUM,AVG etc for calculate several values across rows.These also includes GROUP BY to perform these operations.
--->COUNT:
+
+**How to calculate aggregate functions :** 
+
+We can perform aggregate functions using COUNT,SUM,AVG etc for calculate several values across rows.These also includes GROUP BY to perform these operations.
+                                                      
+**-->COUNT:**
                 The COUNT is used for counting the rows in a table.Ex:
                                                                                SELECT COUNT(user_id) AS total_users
                                                                                FROM users;
 this will count all the users through user_id from user table and will skip the NULL values.
--->SUM:
+
+**-->SUM:**
                 The SUM will add values of a column.Ex:
                                                                                SELECT SUM(salary) AS total_salary
                                                                                FROM employees;
 this adds all the salaries from the employees table.
--->AVG:
+
+**-->AVG:**
            The AVG calculates the average of values in a column which values are numeric.Ex:
+           
                                                                                SELECT AVG(age) AS average_age
                                                                                FROM students;
+                                                                               
 This will calculate the average age from the students table.Here we can also add GROUP BY and isActive column to group the rows in the
 students table based on isActive column.Ex:
+
                                                                                SELECT AVG(age) AS average_age
                                                                                FROM students
                                                                                GROUP BY isActive
+                                                                               
 here usgin GROUP BY we can distinguish between the average age of active and inactive students .
 
  
