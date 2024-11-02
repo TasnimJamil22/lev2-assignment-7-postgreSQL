@@ -10,12 +10,13 @@ Postgres has many key features.which are:
                  
 **-->RDBMS:**
                  It is created based on Relational Database Management System.
-**-->Modern:**
-                *PostgreSQL is very modern as a language as it is supports many modern key features like modern datatypes(INTEGER,SERIAL-auto incrementing integers,Decimal and floating point ,character,Date and Times , Boolean ,UUID,Array types etc).
-                
-                 *it supports multi-version concurrency control(MVCC) to occur simultaneously without interference.
                  
-                  *we can do granullar access control.
+**-->Modern:**
+                PostgreSQL is very modern as a language as it is supports many modern key features like modern datatypes(INTEGER,SERIAL-auto incrementing integers,Decimal and floating point ,character,Date and Times , Boolean ,UUID,Array types etc).
+                
+                it supports multi-version concurrency control(MVCC) to occur simultaneously without interference.
+                 
+                we can do granullar access control.
 
 
 ## 2.What is the purpose of a database schema in PostgreSQL?
