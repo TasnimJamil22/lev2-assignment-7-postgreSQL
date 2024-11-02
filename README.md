@@ -19,8 +19,7 @@ Postgres has many key features.which are:
 # 2.What is the purpose of a database schema in PostgreSQL?
  
 **Purpose of a database schema in PostgreSQL:**
-
-                    The purpose of a database schema in PostgreSQL is very important.It provides a way to LOGICALLY ORGANIZE  and STRUCTURE OBJECTS such as tables ,views, indexes, functions, and other elements within a database.
+The purpose of a database schema in PostgreSQL is very important.It provides a way to LOGICALLY ORGANIZE  and STRUCTURE OBJECTS such as tables ,views, indexes, functions, and other elements within a database.
 some other purposes of a database in PostgresSQL are:
 
 **-->Organization and Structure:**
