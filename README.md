@@ -23,12 +23,11 @@ The purpose of a database schema in PostgreSQL is very important.It provides a w
 some other purposes of a database in PostgresSQL are:
 
 **-->Organization and Structure:**
-
-                     *Schemas provide a way to categorize and organize database objects.
+*Schemas provide a way to categorize and organize database objects.
                      
 **-->Namespace Segmentation:**
 
-                     *Schemas act as separate namespaces, which means it can have multiple tables with the same name in different schemas without causing conflicts. 
+*Schemas act as separate namespaces, which means it can have multiple tables with the same name in different schemas without causing conflicts. 
                      
 **-->Access Control:**
 
