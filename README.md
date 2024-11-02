@@ -49,11 +49,11 @@ Ans:
 **#Primary key:**
                     A primary key is a column or set of columns in a database table that uniquely identifies each row in that table.It ensures that there is no rows which have any similar key value. 
 In PostgreSQL a primary key have:
-                   Uniqueness: A primary key’s value must be unique across all rows in the table.
+              Uniqueness: A primary key’s value must be unique across all rows in the table.
                    
-                   Non-nullable: Primary keys cannot contain NULL values, as they must reliably identify a row.
+              Non-nullable: Primary keys cannot contain NULL values, as they must reliably identify a row.
                    
-                   Index Creation: Automatically creates a unique index on a primary key, which optimizes queries based on the primary key.
+              Index Creation: Automatically creates a unique index on a primary key, which optimizes queries based on the primary key.
                    
 So primary key plays a important role.It keeps Data Integrity, Efficient Access and Acts as a Reference point in relational databases.
 
@@ -61,13 +61,13 @@ So primary key plays a important role.It keeps Data Integrity, Efficient Access 
                       Foreign keys are vary effective for defining relationships between tables.In PostgreSQL it is a field or a group of fields in a table that creates a connection between the data in two tables.
 A foreign key have some key features.These are:
 
-                     Relationship Between Tables:A foreign key creates a link between two tables, usually representing a logical relationship.
+              Relationship Between Tables:A foreign key creates a link between two tables, usually representing a logical relationship.
                      
-                     Reference Integrity:A foreign key constraint ensures that each value in the foreign key column must exist in the referenced table.
+              Reference Integrity:A foreign key constraint ensures that each value in the foreign key column must exist in the referenced table.
                      
-                     Consistency in Data:A foreign key in PostgreSQL helps maintain consistent data.
+              Consistency in Data:A foreign key in PostgreSQL helps maintain consistent data.
                      
-                     Error Reducing:It reduces errors.
+              Error Reducing:It reduces errors.
                      
 By linking data in related tables, foreign keys allow for efficient and accurate management of data across your database.
 
@@ -77,21 +77,22 @@ Ans:
 **The difference between the VARCHAR and CHAR data types:**
                        In postgeSQL, there are some data types and character type is one of them.It has some different kinds.Such as:
                        
-                                                                  1.VARCHAR 
-                                                                  2.CHAR
+                                                  1.VARCHAR 
+                                                  2.CHAR
                                                                   
 There are some differences between VARCHAR and CHAR data types.These are mentioned below:
 
-                      VARCHAR is a variable character but CHAR is a fixed character.
+              VARCHAR is a variable character but CHAR is a fixed character.
                       
-                      VARCHAR is flexible .On the other side , CHAR is constant.
+              VARCHAR is flexible .On the other side , CHAR is constant.
                       
-                      VARCHAR is Ideal for varying-length data and CHAR is Suitable for consistently fixed-length data
-                      Using VARCHAR saves more spaces as it does not take the full length ,rather than it only takes the space it needed but on the other hand , CHAR data type takes the full length although it is not using full space.
+              VARCHAR is Ideal for varying-length data and CHAR is Suitable for consistently fixed-length data.
+              
+              Using VARCHAR saves more spaces as it does not take the full length ,rather than it only takes the space it needed but on the other hand , CHAR data type takes the full length although it is not using full space.
                       
-                      When we define a maximum length for a CHAR or VARCHAR column, and try to insert data that exceeds this limit, PostgreSQL will prevent the operation by throwing an error, instead of automatically truncating or shortening the data.
+              When we define a maximum length for a CHAR or VARCHAR column, and try to insert data that exceeds this limit, PostgreSQL will prevent the operation by throwing an error, instead of automatically truncating or shortening the data.
                       
-    	                VARCHAR is used if text lengths vary widely, such as in names or addresses or location.
+    	        VARCHAR is used if text lengths vary widely, such as in names or addresses or location.
                      
                                                                   ex:   CREATE TABLE example (
                                                                   name VARCHAR(50)
@@ -114,22 +115,22 @@ Ans:
 **-->Comparison Operators:**
                             WHERE clause refines the results with some comparison operators.such as : = for equal ,!= for not equal and <,>,<=,>= for comparing and  refining the results.such as:
                             
-                                                                              SELECT * 
-                                                                              FROM  students
-                                                                              WHERE  email ='%example.com';
+                                                            SELECT * 
+                                                            FROM  students
+                                                            WHERE  email ='%example.com';
                                                                               
 **-->Logical Operators:**
                               The WHERE clause can include multiple conditions using logical operators like AND, OR, and NOT.EX:
                               
-                                                                             SELECT student_id, course_id
-                                                                             FROM enrollment
-                                                                             WHERE  student_id = 2  AND course_id =1 ;
+                                                          SELECT student_id, course_id
+                                                          FROM enrollment
+                                                          WHERE  student_id = 2  AND course_id =1 ;
                                                                              
 **-->Aggregation:** 
                              When we need sum aggrigation operation like SUM(),COUNT(),AVG() etc, WHERE specifies which rows should be aggregated.for example:
                              
-                                                                             SELECT ROUND(AVG(age),2) AS average_age                     
-                                                                             FROM students 
+                                                           SELECT ROUND(AVG(age),2) AS average_age                     
+                                                           FROM students 
 
 ## 6.What are the LIMIT and OFFSET clauses used for?
 Ans:
@@ -137,13 +138,18 @@ Ans:
 **Uses of LIMIT ans OFFSET:**
 LIMIT and OFFSET clauses are used when we need to control the number of rows returned by a query.It enables a a spicific subset of rows at a time.LIMIT controls the number of rows in the result.OFFSET determines the starting position within the result set and skips a specified number of rows before starting to return rows from the result set. 
 For example , ex:1                                                        
-                                                  		                SELECT * 
-                                                                      FROM users
-                                                                      LIMIT 5;
+                                                  		  SELECT * 
+                                                        FROM users
+                                                        LIMIT 5;
+                                                        
 this will return only the first 5 rows from the 'users'  table.
-ex:2                                                                  SELECT * 
-                                                                      FROM users
-                                                                      LIMIT 5 OFFSET 10;
+
+ex:2
+
+                                                        SELECT * 
+                                                        FROM users
+                                                        LIMIT 5 OFFSET 10;
+                                                        
 this will skip the first 10 rows and return the next 5 rows from the 'user'.
 some use cases of LIMIT and OFFSET clauses:
 
@@ -152,10 +158,10 @@ some use cases of LIMIT and OFFSET clauses:
                                  
 **-->Social Media Feed:**
                                   In socail media feed , LIMIT and OFFSET is used.such as : 
-                                                                                      SELECT * 
-                                                                                      FROM posts 
-                                                                                      ORDER BY created_at DESC 
-                                                                                      LIMIT 10 OFFSET 10;
+                                                       SELECT * 
+                                                       FROM posts 
+                                                       ORDER BY created_at DESC 
+                                                       LIMIT 10 OFFSET 10;
 here, each time user scrolls ,the application increases the OFFSET by 10 to load the next batch of posts.
 
 **-->User Search Results:**
@@ -169,28 +175,32 @@ Ans:
 **Data modification using UPDATE statements:**
 The UPDATE statement is used to modify existing data in a table.It can change one or multiple columns in specific rows.If we need to change to a specific rows,we can apply conditions through UPDATE, also can use subqueries to set new values.
 We can perform data modification using UPDATE statements.Such as: 
-                                                                                      UPDATE students
-                                                                                      SET status = 'Awarded' 
-                                                                                      WHERE(frontend_mark+backend_mark)=(
-                                                                                      SELECT MAX(frontend_mark + backend_mark)
-                                                                                      FROM students
-                                                                                      );  
+                                                      UPDATE students
+                                                      SET status = 'Awarded' 
+                                                      WHERE(frontend_mark+backend_mark)=(
+                                                      SELECT MAX(frontend_mark + backend_mark)
+                                                      FROM students
+                                                      );  
                                                                                       
 **-->Updating single column:**
                                 To update a single column, we give condition using 'WHERE' clause.ex:
-                                                                                      UPDATE users
-                                                                                      SET  status = 'Active'
-                                                                                      WHERE  isActive = TRUE
+                                
+                                                       UPDATE users
+                                                       SET  status = 'Active'
+                                                       WHERE  isActive = TRUE
                                                                                       
 **-->Updating Multiple Columns:**
-                                We can update multiple columns in one statement by separeting each column value with a comma.ex:                                                                                                            UPDATE students
-                                                                                      SET  status = 'Active' , isActive = TRUE
-                                                                                      WHERE  inActive = FALSE
+                                We can update multiple columns in one statement by separeting each column value with a comma.ex:  
+                                
+                                                      UPDATE students
+                                                      SET  status = 'Active' , isActive = TRUE
+                                                      WHERE  inActive = FALSE
+                                                      
 -**->Conditional Update:**
                                   We can use conditions (>,<,=,!=)in WHERE clause to update  specific rows.Ex:
-                                                                                      UPDATE students
-                                                                                      SET  grade = 'A+'
-                                                                                      WHERE marks >= 80
+                                                    UPDATE students
+                                                    SET  grade = 'A+'
+                                                    WHERE marks >= 80
 
 ## 8.What is the significance of the JOIN operation, and how does it work in PostgreSQL?
 Ans:
@@ -218,10 +228,10 @@ In PostgreSQL ,to perform advance operations, we can use JOIN operations.It prov
 It creates a virtual table from the data and then it allows a single query.
 It works in a specific way:
 
-                                                                                       SELECT s.student_name
-                                                                                       FROM enrollment e
-                                                                                       JOIN students s ON e.student_id = s.student_id
-                                                                                       WHERE course_id = 1
+                                                         SELECT s.student_name
+                                                         FROM enrollment e
+                                                         JOIN students s ON e.student_id = s.student_id
+                                                         WHERE course_id = 1
                                                                                        
 
 In this example we can see that, 
@@ -236,10 +246,10 @@ In this example we can see that,
                                       *then we also add a WHERE clause and retrieved a table in which course_id is 1.
 In the below example,
 
-                                                                                SELECT s.student_name
-                                                                                FROM enrollment e
-                                                                                INNER JOIN students s ON e.student_id = s.student_id
-                                                                                WHERE course_id = 1
+                                                    SELECT s.student_name
+                                                    FROM enrollment e
+                                                    INNER JOIN students s ON e.student_id = s.student_id
+                                                    WHERE course_id = 1
                                                                                 
 we used INNER before join which is a type of join, we can use diffrent type of joins like,
 
@@ -257,11 +267,10 @@ Ans:
 **The GROUP BY clause:**
                                    The GROUP BY clause in postgreSQL is very important.It is used for arranging data and also helps performing aggregation operations.Aggregations are performed individually by this GROUP BY clause.
                                    
-ex:                                                                                   SELECT c.course_name, COUNT(e.course_id) AS students_enrolled
-
-                                                                                       FROM enrollment e
-                                                                                       JOIN courses c ON e.course_id = c.course_id
-                                                                                       GROUP BY c.course_name;
+ex:                                                  SELECT c.course_name, COUNT(e.course_id) AS students_enrolled
+                                                     FROM enrollment e
+                                                     JOIN courses c ON e.course_id = c.course_id
+                                                     GROUP BY c.course_name;
 here,
 
 *we performed aggregation COUNT() to identify the number of total course_id and named it with students_enrolled.
@@ -283,28 +292,32 @@ We can perform aggregate functions using COUNT,SUM,AVG etc for calculate several
                                                       
 **-->COUNT:**
                 The COUNT is used for counting the rows in a table.Ex:
-                                                                               SELECT COUNT(user_id) AS total_users
-                                                                               FROM users;
+                
+                                                   SELECT COUNT(user_id) AS total_users
+                                                   FROM users;
+                                                                               
 this will count all the users through user_id from user table and will skip the NULL values.
 
 **-->SUM:**
                 The SUM will add values of a column.Ex:
-                                                                               SELECT SUM(salary) AS total_salary
-                                                                               FROM employees;
+                
+                                                  SELECT SUM(salary) AS total_salary
+                                                  FROM employees;
+                                                                               
 this adds all the salaries from the employees table.
 
 **-->AVG:**
            The AVG calculates the average of values in a column which values are numeric.Ex:
            
-                                                                               SELECT AVG(age) AS average_age
-                                                                               FROM students;
+                                                 SELECT AVG(age) AS average_age
+                                                 FROM students;
                                                                                
 This will calculate the average age from the students table.Here we can also add GROUP BY and isActive column to group the rows in the
 students table based on isActive column.Ex:
 
-                                                                               SELECT AVG(age) AS average_age
-                                                                               FROM students
-                                                                               GROUP BY isActive
+                                                  SELECT AVG(age) AS average_age
+                                                  FROM students
+                                                  GROUP BY isActive
                                                                                
 here usgin GROUP BY we can distinguish between the average age of active and inactive students .
 
