@@ -2,7 +2,7 @@
 Ans:
 
 **#PostgreSQL :**
-                 PostgreSQL which is also called 'postgres' is the world's most Advanced Open Source  Relational Database Management System(RDBMS).We can communicate with postgres via SQL language(structured query language) .
+                  PostgreSQL which is also called 'postgres' is the world's most Advanced Open Source  Relational Database Management System(RDBMS).We can communicate with postgres via SQL language(structured query language) .
 Postgres has many key features.which are:
 
 **-->Open Source:**
