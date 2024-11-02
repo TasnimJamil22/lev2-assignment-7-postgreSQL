@@ -1,4 +1,4 @@
-## 1.What is PostgreSQL?
+## 1.What is PostgreSQL? 
 Ans:
 
 **#PostgreSQL :**
