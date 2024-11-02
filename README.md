@@ -88,10 +88,13 @@ There are some differences between VARCHAR and CHAR data types.These are mention
               VARCHAR is Ideal for varying-length data and CHAR is Suitable for consistently fixed-length data.
               
               Using VARCHAR saves more spaces as it does not take the full length ,rather than it only takes
-              the space it needed but on the other hand , CHAR data type takes the full length although it is not using full space.
+              the space it needed but on the other hand , CHAR data type takes the full length although 
+              it is not using full space.
                       
-              When we define a maximum length for a CHAR or VARCHAR column, and try to insert data that exceeds this limit, 
-              PostgreSQL will prevent the operation by throwing an error, instead of automatically truncating or shortening the data.
+              When we define a maximum length for a CHAR or VARCHAR column, and try to insert
+              data that exceeds this limit, 
+              PostgreSQL will prevent the operation by throwing an error, instead of automatically
+              truncating or shortening the data.
                       
     	        VARCHAR is used if text lengths vary widely, such as in names or addresses or location.
                      
@@ -99,7 +102,8 @@ There are some differences between VARCHAR and CHAR data types.These are mention
                                                  name VARCHAR(50)
                                                  );
                                                                   
-and CHAR for fixed-length fields, such as standard codes like country codes or fixed-length IDs where consistency is needed.
+and CHAR for fixed-length fields, such as standard codes like country codes or fixed-length
+IDs where consistency is needed.
 
                                             ex:   CREATE TABLE example (
                                             country_code CHAR(3)
@@ -282,13 +286,15 @@ ex:                                                  SELECT c.course_name, COUNT
                                                      GROUP BY c.course_name;
 here,
 
-*we performed aggregation COUNT() to identify the number of total course_id and named it with students_enrolled.
+*we performed aggregation COUNT() to identify the number of total course_id 
+and named it with students_enrolled.
 
 *We specifiend the table in which we want to operate.
 
 *Using JOIN we joined the course_id of two tables courses and enrollment.
 
-*Lastly, we used GROUP BY to retrieve the courses we counted with the COUNT() in a group named courses_name.
+*Lastly, we used GROUP BY to retrieve the courses we counted with the COUNT() 
+in a group named courses_name.
 
 So, GROUP BY is a powerful key way to perform data aggregation in a structured way.
 
