@@ -1,15 +1,15 @@
 ## 1.What is PostgreSQL?
 Ans:
-#PostgreSQL :
+**#PostgreSQL :**
                  PostgreSQL which is also called 'postgres' is the world's most Advanced Open Source  Relational Database Management System(RDBMS).We can communicate with postgres via SQL language(structured query language) .
 Postgres has many key features.which are:
 
--->Open Source:
+**-->Open Source:**
                  Many higher level international developer communities are continuously supporting this language,contributing it,fixing bugs if there any and also adding some robust features and as a result postgres became so popular now-a-days.
                  
--->RDBMS:
+**-->RDBMS:**
                  It is created based on Relational Database Management System.
--->Modern:
+**-->Modern:**
                 *PostgreSQL is very modern as a language as it is supports many modern key features like modern datatypes(INTEGER,SERIAL-auto incrementing integers,Decimal and floating point ,character,Date and Times , Boolean ,UUID,Array types etc).
                  *it supports multi-version concurrency control(MVCC) to occur simultaneously without interference.
                   *we can do granullar access control.
@@ -17,39 +17,39 @@ Postgres has many key features.which are:
 
 ## 2.What is the purpose of a database schema in PostgreSQL?
 Ans:
-#Purpose of a database schema in PostgreSQL:
+**#Purpose of a database schema in PostgreSQL:**
                     The purpose of a database schema in PostgreSQL is very important.It provides a way to LOGICALLY ORGANIZE  and STRUCTURE OBJECTS such as tables ,views, indexes, functions, and other elements within a database.
 some other purposes of a database in PostgresSQL are:
--->Organization and Structure:
-                     *Schemas provide a way to categorize and organize database objects.
--->Namespace Segmentation:
-                     *Schemas act as separate namespaces, which means it can have multiple tables with the same name in different schemas without causing conflicts. 
--->Access Control: 
-                     *Schemas allow to set permissions at the schema level.
-                     *It can be controlled which users have access to specific schemas or tables within them
-                     *Adding a layer of security and organization for user access.
--->Simplifies Data Management: 
-                     *Schemas simplifies data management by allowing Related Tables Together.
-                     * Simplified Queries and Maintenance so that administrators and developers can easily find and manage specific groups of tables without sifting through unrelated tables.
+**-->Organization and Structure:**
+                     Schemas provide a way to categorize and organize database objects.
+**-->Namespace Segmentation:**
+                      chemas act as separate namespaces, which means it can have multiple tables with the same name in different schemas without causing conflicts. 
+**-->Access Control: **
+                      Schemas allow to set permissions at the schema level.
+                      It can be controlled which users have access to specific schemas or tables within them
+                      Adding a layer of security and organization for user access.
+**-->Simplifies Data Management: **
+                      Schemas simplifies data management by allowing Related Tables Together.
+                      Simplified Queries and Maintenance so that administrators and developers can easily find and manage specific groups of tables without sifting through unrelated tables.
 
 
 ## 3.Explain the primary key and foreign key concepts in PostgreSQL.
 Ans:
-#Primary key:
+**#Primary key:**
                     A primary key is a column or set of columns in a database table that uniquely identifies each row in that table.It ensures that there is no rows which have any similar key value. 
 In PostgreSQL a primary key have:
-                   *Uniqueness: A primary key’s value must be unique across all rows in the table.
-                   *Non-nullable: Primary keys cannot contain NULL values, as they must reliably identify a row.
-                   *Index Creation: Automatically creates a unique index on a primary key, which optimizes queries based on the primary key.
+                   Uniqueness: A primary key’s value must be unique across all rows in the table.
+                   Non-nullable: Primary keys cannot contain NULL values, as they must reliably identify a row.
+                   Index Creation: Automatically creates a unique index on a primary key, which optimizes queries based on the primary key.
 So primary key plays a important role.It keeps Data Integrity, Efficient Access and Acts as a Reference point in relational databases.
 
-#Foreign key:
+**#Foreign key:**
                       Foreign keys are vary effective for defining relationships between tables.In PostgreSQL it is a field or a group of fields in a table that creates a connection between the data in two tables.
 A foreign key have some key features.These are:
-                     *Relationship Between Tables:A foreign key creates a link between two tables, usually representing a logical relationship.
-                     *Reference Integrity:A foreign key constraint ensures that each value in the foreign key column must exist in the referenced table.
-                     *Consistency in Data:A foreign key in PostgreSQL helps maintain consistent data.
-                     *Error Reducing:It reduces errors.
+                     Relationship Between Tables:A foreign key creates a link between two tables, usually representing a logical relationship.
+                     Reference Integrity:A foreign key constraint ensures that each value in the foreign key column must exist in the referenced table.
+                     Consistency in Data:A foreign key in PostgreSQL helps maintain consistent data.
+                     Error Reducing:It reduces errors.
 By linking data in related tables, foreign keys allow for efficient and accurate management of data across your database.
 
 ## 4.What is the difference between the VARCHAR and CHAR data types?
