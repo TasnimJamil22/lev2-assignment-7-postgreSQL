@@ -87,21 +87,23 @@ There are some differences between VARCHAR and CHAR data types.These are mention
                       
               VARCHAR is Ideal for varying-length data and CHAR is Suitable for consistently fixed-length data.
               
-              Using VARCHAR saves more spaces as it does not take the full length ,rather than it only takes the space it needed but on the other hand , CHAR data type takes the full length although it is not using full space.
+              Using VARCHAR saves more spaces as it does not take the full length ,rather than it only takes
+              the space it needed but on the other hand , CHAR data type takes the full length although it is not using full space.
                       
-              When we define a maximum length for a CHAR or VARCHAR column, and try to insert data that exceeds this limit, PostgreSQL will prevent the operation by throwing an error, instead of automatically truncating or shortening the data.
+              When we define a maximum length for a CHAR or VARCHAR column, and try to insert data that exceeds this limit, 
+              PostgreSQL will prevent the operation by throwing an error, instead of automatically truncating or shortening the data.
                       
     	        VARCHAR is used if text lengths vary widely, such as in names or addresses or location.
                      
-                                                                  ex:   CREATE TABLE example (
-                                                                  name VARCHAR(50)
-                                                                  );
+                                            ex:  CREATE TABLE example (
+                                                 name VARCHAR(50)
+                                                 );
                                                                   
 and CHAR for fixed-length fields, such as standard codes like country codes or fixed-length IDs where consistency is needed.
 
-                                                                  ex:   CREATE TABLE example (
-                                                                  country_code CHAR(3)
-                                                                   );                                                                              
+                                            ex:   CREATE TABLE example (
+                                            country_code CHAR(3)
+                                            );                                                                              
                  
 
 ## 5.Explain the purpose of the WHERE clause in a SELECT statement.
@@ -211,19 +213,24 @@ In PostgreSQL ,to perform advance operations, we can use JOIN operations.It prov
                                     JOIN allows to pull related information from different tables into a single result set.
                                     
 **-->Reduces Data Redundancy:**
-                                    We can reduce data reduncdancy and duplicating data in multiple tables  and use JOIN to connect them as needed.It hepls reduces storage requirements also.
+                                    We can reduce data reduncdancy and duplicating data in multiple tables 
+                                    and use JOIN to connect them as needed.It hepls reduces storage requirements also.
                                     
 **-->Improves Data Integrity:**
-                                    JOIN ensures that data remains consistent across tables.Also help avoid having duplicate and conflicting information.
+                                    JOIN ensures that data remains consistent across tables.Also help avoid 
+                                    having duplicate and conflicting information.
                                     
 **-->Retrieves Efficient Data:**
-                                    JOIN allows for efficient retrieval of data by fetching only the necessary columns and rows.
+                                    JOIN allows for efficient retrieval of data by fetching only the necessary
+                                    columns and rows.
                                     
 **-->Enhances Query Flexibility:**
-                                    With different types of JOIN (inner join, left join,right join,full join), we can extract data in various ways.
+                                    With different types of JOIN (inner join, left join,right join,full join),
+                                    we can extract data in various ways.
                                     
 **How does JOIN work in PostgreSQL:**
-                                    In postgreSQL JOIN combines rows from two or more tables based on a common column between them.
+                                    In postgreSQL JOIN combines rows from two or more tables 
+                                    based on a common column between them.
 It creates a virtual table from the data and then it allows a single query.
 It works in a specific way:
 
@@ -236,11 +243,14 @@ It works in a specific way:
 In this example we can see that, 
                                       *firstly we defined the table in by specifying the table we want to join.
                                       
-                                      *we write s.student_name, here we make alias for student, and it is not in enrollment e table but we want to join it.
+                                      *we write s.student_name, here we make alias for student,
+                                      and it is not in enrollment e table but we want to join it.
                                       
                                       *we wrote enrollment e as we want to join in enrollment  table.
                                       
-                                      *then we used JOIN and made a condition in which we declared how they will be related with each other, the student_id in enrollmet table will be equal to the student table's student_id,
+                                      *then we used JOIN and made a condition in which we declared
+                                      how they will be related with each other, the student_id in enrollmet table will be equal
+                                      to the student table's student_id,
                                       
                                       *then we also add a WHERE clause and retrieved a table in which course_id is 1.
 In the below example,
@@ -287,7 +297,8 @@ Ans:
 
 **How to calculate aggregate functions :** 
 
-We can perform aggregate functions using COUNT,SUM,AVG etc for calculate several values across rows.These also includes GROUP BY to perform these operations.
+We can perform aggregate functions using COUNT,SUM,AVG etc for calculate several values across rows.
+These also includes GROUP BY to perform these operations.
                                                       
 **-->COUNT:**
                 The COUNT is used for counting the rows in a table.Ex:
@@ -311,7 +322,8 @@ this adds all the salaries from the employees table.
                                                  SELECT AVG(age) AS average_age
                                                  FROM students;
                                                                                
-This will calculate the average age from the students table.Here we can also add GROUP BY and isActive column to group the rows in the
+This will calculate the average age from the students table.Here we can also add GROUP BY and
+isActive column to group the rows in the
 students table based on isActive column.Ex:
 
                                                   SELECT AVG(age) AS average_age
